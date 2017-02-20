@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<head>
+        <meta charset="utf-8">
+        <title>Go-t</title>
+</head>
+<body>
+<h1>Hello</h1>
+<h2>wannabe Cops ({{if gt (len .Agents) 3}}too many{{else}}{{len .Agents}}{{end}}): </h2>
+<ul>
+	{{range .Agents}}
+	<li>Name {{.Name | ft | uppy}} - age {{.Age}} - LicenseToKill {{range .Licenses}} {{.Id}} until {{.YearsPlus5}} {{end}}</li>
+	{{end}}
+</ul>
+<p>J'arrive à {{ hr .Tim }} attendez moi pas surtout</p>
+{{template "attend"}}
+</body>
